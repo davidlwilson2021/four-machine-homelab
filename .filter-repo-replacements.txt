@@ -1,0 +1,4 @@
+﻿regex:\b(?:10\.(?:\d{1,3}\.){2}\d{1,3}|192\.168\.(?:\d{1,3})\.\d{1,3}|172\.(?:1[6-9]|2\d|3[0-1])\.(?:\d{1,3})\.\d{1,3})\b==>[REDACTED_PRIVATE_IP]
+regex:\b(?:wdmycloud|backup-nas)\.local\b==>[REDACTED_HOSTNAME]
+regex:\bdwilson\b==>admin-user
+regex:davidlwilson@email\.phoenix\.edu==>davidlwilson2021@users.noreply.github.com

@@ -1,0 +1,14 @@
+pa-3020-mgmt==>host-01
+cisco-3750-mgmt==>host-02
+antsle-ipmi==>host-03
+antsle-data==>host-04
+macpro==>host-05
+msi==>host-06
+wdmycloud.local==>[REDACTED_HOSTNAME]
+backup-nas.local==>[REDACTED_HOSTNAME]
+dwilson==>admin-user
+greyhawkdiesel@gmail.com==>[REDACTED_EMAIL]
+192.168.1.50==>[REDACTED_PRIVATE_IP]
+192.168.1.123==>[REDACTED_PRIVATE_IP]
+192.168.1.1==>[REDACTED_PRIVATE_IP]
+192.168.0.1==>[REDACTED_PRIVATE_IP]
