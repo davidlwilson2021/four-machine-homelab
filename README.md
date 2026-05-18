@@ -21,12 +21,12 @@
 
 ## Machines
 
-| Machine | Role | Lab IP |
-|---------|------|--------|
-| Antsle One | TrueNAS Scale, ZFS, personal services | [REDACTED_PRIVATE_IP] |
-| Mac Pro 5,1 | Postgres, MinIO, Airflow, Jupyter | [REDACTED_PRIVATE_IP] |
-| MSI Codex ZS 5TC | Ollama / GPU inference & training | [REDACTED_PRIVATE_IP] |
-| MacBook M1 | Thin client, admin | [REDACTED_PRIVATE_IP] (DHCP) |
+| Machine | Role | Network zone |
+|---------|------|--------------|
+| Antsle One | TrueNAS Scale, ZFS, personal services | VLAN 20 (storage) |
+| Mac Pro 5,1 | Postgres, MinIO, Airflow, Jupyter | VLAN 30 (compute) |
+| MSI Codex ZS 5TC | Ollama / GPU inference & training | VLAN 30 (compute) |
+| MacBook M1 | Thin client, admin | VLAN 10 (management, DHCP) |
 
 **Network:** Cisco 3750v2 core, Palo Alto PA-3020 lab perimeter, Firewalla household edge (Option B). Remote access via Tailscale.
 
