@@ -5,7 +5,7 @@ Done when personal data is on Antsle, snapshots are running, and one cold-backup
 ## Preconditions
 
 - [ ] Phase 1 complete (VLANs and routing validated)
-- [ ] Antsle data NIC reachable at `[REDACTED_PRIVATE_IP]`
+- [ ] Antsle data NIC reachable at the storage-VLAN address from your private runbook
 - [ ] Manual source reference confirmed in `docs/source-manuals-status.md`
 
 ## Build sequence
@@ -25,6 +25,6 @@ Done when personal data is on Antsle, snapshots are running, and one cold-backup
 
 ## Exit criteria
 
-- [ ] Antsle is serving production personal data on `[REDACTED_PRIVATE_IP]`
+- [ ] Antsle is serving production personal data on the storage-VLAN address from your private runbook
 - [ ] Snapshots are active and visible in Data Protection UI
 - [ ] Cold backup completed at least once without error

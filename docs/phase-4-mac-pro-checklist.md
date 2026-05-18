@@ -4,7 +4,7 @@ Done when MacBook can run Jupyter workloads against Postgres and MinIO on the Ma
 
 ## Platform bring-up
 
-- [ ] Install Linux and Docker on Mac Pro (`[REDACTED_PRIVATE_IP]`)
+- [ ] Install Linux and Docker on Mac Pro (compute VLAN host from private runbook)
 - [ ] Copy `configs/mac-pro/docker-compose.yml` and define env vars
 - [ ] Start stack and verify `postgres` and `minio` health
 - [ ] Add Airflow and Jupyter services for full phase target

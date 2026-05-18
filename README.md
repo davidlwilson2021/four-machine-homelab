@@ -59,8 +59,8 @@ scripts/        Cold-backup rsync and migration verification helpers
 
 ## Sync (manual)
 
-- **NAS mirror:** `\\MYCLOUDEX2ULTRA\Projects\ai-workspace\cursor-workspace\homelab`
 - **Git remote:** Initialize and push when ready (`git remote add origin …`)
+- Keep hostnames, local paths, and addressing in private ops notes (not in public repo).
 
 ---
 

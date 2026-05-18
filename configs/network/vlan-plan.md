@@ -4,22 +4,22 @@ Canonical copy of [decisions.md](../../docs/decisions.md) section 1 for device c
 
 | VLAN ID | Name | Subnet | Gateway (typical) |
 |---------|------|--------|-------------------|
-| 1 | family | [REDACTED_PRIVATE_IP]/24 | Firewalla |
-| 10 | lab-mgmt | [REDACTED_PRIVATE_IP]/24 | [REDACTED_PRIVATE_IP] (PA) or .2 (Cisco) |
-| 20 | lab-storage | [REDACTED_PRIVATE_IP]/24 | [REDACTED_PRIVATE_IP] (Cisco SVI) |
-| 30 | lab-compute | [REDACTED_PRIVATE_IP]/24 | [REDACTED_PRIVATE_IP] (Cisco SVI) |
-| 40 | lab-dmz | [REDACTED_PRIVATE_IP]/24 | [REDACTED_PRIVATE_IP] (Cisco SVI, reserved) |
+| 1 | family | family-lan-subnet | household-edge-gateway |
+| 10 | lab-mgmt | lab-mgmt-subnet | mgmt-gateway |
+| 20 | lab-storage | lab-storage-subnet | storage-gateway |
+| 30 | lab-compute | lab-compute-subnet | compute-gateway |
+| 40 | lab-dmz | lab-dmz-subnet | dmz-gateway (reserved) |
 
 ## Static assignments
 
-| Host | IP |
-|------|-----|
-| host-01 | [REDACTED_PRIVATE_IP] |
-| host-02 | [REDACTED_PRIVATE_IP] |
-| host-03 | [REDACTED_PRIVATE_IP] |
-| host-04 | [REDACTED_PRIVATE_IP] |
-| host-05 | [REDACTED_PRIVATE_IP] |
-| host-06 | [REDACTED_PRIVATE_IP] |
+| Host role | Address reference |
+|-----------|-------------------|
+| host-01 | mgmt-gateway |
+| host-02 | mgmt-switch |
+| host-03 | host-03-host |
+| host-04 | antsle-storage-host |
+| host-05 | host-05-compute-host |
+| host-06 | host-06-compute-host |
 
 ## Tailscale
 

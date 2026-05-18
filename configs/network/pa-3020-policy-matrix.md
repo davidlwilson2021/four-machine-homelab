@@ -4,13 +4,13 @@ This matrix captures intended allow/deny behavior before rule implementation.
 
 | Source zone/subnet | Destination zone/subnet | Service | Action | Reason |
 |--------------------|-------------------------|---------|--------|--------|
-| Lab mgmt `[REDACTED_PRIVATE_IP]/24` | Lab storage `[REDACTED_PRIVATE_IP]/24` | HTTPS/SSH/ICMP | Allow | Admin access to Antsle/infra |
-| Lab compute `[REDACTED_PRIVATE_IP]/24` | Lab storage `[REDACTED_PRIVATE_IP]/24` | SMB/NFS/MinIO as needed | Allow (scoped) | Data path for pipelines |
-| Lab storage `[REDACTED_PRIVATE_IP]/24` | Lab compute `[REDACTED_PRIVATE_IP]/24` | Established/related | Allow | Return traffic only |
-| Lab VLANs `[REDACTED_PRIVATE_IP]/16` | Internet | Required app ports | Allow | Package pulls and updates |
-| Lab VLANs `[REDACTED_PRIVATE_IP]/16` | Family LAN `[REDACTED_PRIVATE_IP]/24` | Any | Deny | Household isolation |
-| Family LAN `[REDACTED_PRIVATE_IP]/24` | Lab VLANs `[REDACTED_PRIVATE_IP]/16` | Any | Deny | Household isolation |
-| Any | DMZ `[REDACTED_PRIVATE_IP]/24` | Any | Deny by default | Future zone reserved |
+| Lab mgmt `lab-mgmt-subnet` | Lab storage `lab-storage-subnet` | HTTPS/SSH/ICMP | Allow | Admin access to storage/infra |
+| Lab compute `lab-compute-subnet` | Lab storage `lab-storage-subnet` | SMB/NFS/MinIO as needed | Allow (scoped) | Data path for pipelines |
+| Lab storage `lab-storage-subnet` | Lab compute `lab-compute-subnet` | Established/related | Allow | Return traffic only |
+| Lab VLANs `lab-address-space` | Internet | Required app ports | Allow | Package pulls and updates |
+| Lab VLANs `lab-address-space` | Family LAN `family-lan-subnet` | Any | Deny | Household isolation |
+| Family LAN `family-lan-subnet` | Lab VLANs `lab-address-space` | Any | Deny | Household isolation |
+| Any | DMZ `lab-dmz-subnet` | Any | Deny by default | Future zone reserved |
 
 ## Notes
 
