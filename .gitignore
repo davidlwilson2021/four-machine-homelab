@@ -13,7 +13,16 @@ Thumbs.db
 .env.*
 !.env.example
 !**/.env.example
+*.local.env
 secrets/
+*.pem
+*.key
+id_rsa*
+credentials.json
+docker-compose.override.yml
+.smb-coldbackup
+**/smb-credentials
+!configs/mac-pro/smb-credentials.example
 
 # TrueNAS / local overrides
 configs/network/local-*.conf

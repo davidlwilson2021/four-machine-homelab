@@ -53,7 +53,13 @@
 docs/           Architecture, sign-offs, and execution checklists by phase
 configs/        Network snippets, TrueNAS dataset/snapshot baselines, Mac Pro compose
 scripts/        Cold-backup rsync and migration verification helpers
+.github/        CI (gitleaks secret scan on push/PR)
 ```
+
+## Security
+
+- Secret scan: [gitleaks workflow](.github/workflows/gitleaks.yml) — see [docs/security-ci.md](docs/security-ci.md) for local runs, credential rotation, and dependency policy.
+- Cold backup: use `WD_CREDENTIALS_FILE` (mode `600`); opt in to `rsync --delete` with `RSYNC_DELETE=1` and `CONFIRM_DELETE=yes`.
 
 ---
 
