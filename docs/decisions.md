@@ -4,20 +4,20 @@
 
 **Signed off:** 2026-05-17 (execution start)
 
-## 1. VLAN and IP plan
+## 1. VLAN and addressing plan
 
 **Decision:** Accept Lab Architecture §3.2–3.3 as written.
 
 | VLAN | Subnet | Purpose | Key hosts |
 |------|--------|---------|-----------|
-| 1 | [REDACTED_PRIVATE_IP]/24 | Family LAN (untouched) | Amplifi, household devices |
-| 10 | [REDACTED_PRIVATE_IP]/24 | Lab management | PA `.1`, Cisco `.2`, Antsle IPMI `.10`, MacBook DHCP `.50` |
-| 20 | [REDACTED_PRIVATE_IP]/24 | Lab storage | Antsle data NIC **[REDACTED_PRIVATE_IP]** |
-| 30 | [REDACTED_PRIVATE_IP]/24 | Lab compute | Mac Pro **[REDACTED_PRIVATE_IP]**, MSI **[REDACTED_PRIVATE_IP]** |
-| 40 | [REDACTED_PRIVATE_IP]/24 | Lab DMZ (reserved) | Future exposed services |
+| 1 | family-lan-subnet | Family LAN (untouched) | household devices |
+| 10 | lab-mgmt-subnet | Lab management | firewall mgmt, switch mgmt, IPMI, admin client |
+| 20 | lab-storage-subnet | Lab storage | Antsle data NIC |
+| 30 | lab-compute-subnet | Lab compute | Mac Pro, MSI |
+| 40 | lab-dmz-subnet | Lab DMZ (reserved) | Future exposed services |
 | — | 100.x.x.x | Tailscale | Personal remote access |
 
-**Notes:** Phase 2 Antsle manual examples using `[REDACTED_PRIVATE_IP]` map to **[REDACTED_PRIVATE_IP]** on VLAN 20.
+**Notes:** Keep exact address assignments in a private operator runbook outside this public repository.
 
 ## 2. Firewalla disposition
 

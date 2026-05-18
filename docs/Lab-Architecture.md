@@ -80,24 +80,24 @@ See docx for full tables and estimated used-market values (~$3,550–$5,400 tota
 
 | VLAN | Subnet | Purpose |
 |------|--------|---------|
-| 1 | [REDACTED_PRIVATE_IP]/24 | Family LAN (untouched) |
-| 10 | [REDACTED_PRIVATE_IP]/24 | Lab management |
-| 20 | [REDACTED_PRIVATE_IP]/24 | Lab storage |
-| 30 | [REDACTED_PRIVATE_IP]/24 | Lab compute |
-| 40 | [REDACTED_PRIVATE_IP]/24 | Lab DMZ (reserved) |
+| 1 | family-lan-subnet | Family LAN (untouched) |
+| 10 | lab-mgmt-subnet | Lab management |
+| 20 | lab-storage-subnet | Lab storage |
+| 30 | lab-compute-subnet | Lab compute |
+| 40 | lab-dmz-subnet | Lab DMZ (reserved) |
 | — | 100.x.x.x | Tailscale mesh |
 
 ### 3.3 IP plan
 
-| Device | VLAN | IP |
-|--------|------|-----|
-| Palo Alto mgmt | 10 | [REDACTED_PRIVATE_IP] |
-| Cisco mgmt | 10 | [REDACTED_PRIVATE_IP] |
-| Antsle IPMI | 10 | [REDACTED_PRIVATE_IP] |
-| Antsle data (LAN1) | 20 | **[REDACTED_PRIVATE_IP]** |
-| Mac Pro | 30 | [REDACTED_PRIVATE_IP] |
-| MSI | 30 | [REDACTED_PRIVATE_IP] |
-| MacBook (admin) | 10 | [REDACTED_PRIVATE_IP] DHCP |
+| Device | VLAN | Address reference |
+|--------|------|-------------------|
+| Palo Alto mgmt | 10 | mgmt-gateway |
+| Cisco mgmt | 10 | mgmt-switch |
+| Antsle IPMI | 10 | host-03-host |
+| Antsle data (LAN1) | 20 | antsle-storage-host |
+| Mac Pro | 30 | host-05-compute-host |
+| MSI | 30 | host-06-compute-host |
+| MacBook (admin) | 10 | admin-client-dhcp |
 
 ### 3.4 Remote access
 

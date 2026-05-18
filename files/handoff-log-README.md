@@ -46,14 +46,14 @@ claude-handoff/
 ## Session handoff
 **Date / project:** 2026-05-17 / four-machine homelab  
 **Goal:** Build Antsle first, then continue full lab phases  
-**Branch / key paths:** `c:\Users\Home Network\.cursor\projects\home-lab-\claude_handoff`, plan at `c:\Users\Home Network\.cursor\plans\four-machine_homelab_build_3effb9d3.plan.md`  
+**Branch / key paths:** `master`; workspace `claude_handoff`; plan `four-machine_homelab_build_3effb9d3.plan.md`  
 **Completed:**  
 - Build marked in progress  
 - Sign-off decisions completed (VLAN/IP confirmed, Firewalla Option B, default phase order)  
 - Word docs now present in workspace  
 **In progress:** Phase 0 hardware (`phase-0-hardware: in_progress`)  
 **Decisions (do not re-litigate):**  
-- Antsle IP `[REDACTED_PRIVATE_IP]`, Mac Pro `[REDACTED_PRIVATE_IP]`, MSI `[REDACTED_PRIVATE_IP]`  
+- Addressing references are stored in private operator notes  
 - Firewalla Option B (household edge unchanged; PA-3020 lab-only)  
 - Phase order `0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6`  
 **Next 3 steps:**  
