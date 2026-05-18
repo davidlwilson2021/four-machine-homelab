@@ -9,6 +9,13 @@ Done when a local LLM is reachable from MacBook and a working RAG demo uses Mac 
 - [ ] Deploy Ollama and Open WebUI
 - [ ] Validate GPU visibility and model load performance
 
+## Inference exposure (before MacBook access)
+
+- [ ] Bind Ollama/Open WebUI to MSI compute VLAN address or Tailscale — not public `0.0.0.0`
+- [ ] Enable WebUI authentication; disable anonymous admin
+- [ ] Block inbound from family LAN and Internet at PA-3020 (lab isolation matrix)
+- [ ] Prefer Tailscale for remote inference; avoid port forwarding on Firewalla
+
 ## Data integration
 
 - [ ] Pull feature data/artifacts from MinIO on VLAN 30

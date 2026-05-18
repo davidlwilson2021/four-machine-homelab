@@ -2,10 +2,13 @@
 # Deploy on the compute host after Linux + Docker install.
 # Copy to host and run: docker compose --env-file .env up -d
 # For public safety, all secrets are required from environment variables.
+#
+# Image pins: update deliberately after reviewing release notes (MinIO CVE advisories, etc.).
+# If this stack was ever run with historical weak defaults (e.g. changeme), rotate all DB/object-store credentials before reuse.
 
 services:
   postgres:
-    image: postgres:16-alpine
+    image: postgres:16.8-alpine
     environment:
       POSTGRES_USER: ${POSTGRES_USER:?set in .env}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set in .env}
@@ -17,7 +20,7 @@ services:
     restart: unless-stopped
 
   minio:
-    image: minio/minio:latest
+    image: minio/minio:RELEASE.2025-09-07T16-13-09Z
     command: server /data --console-address ":9001"
     environment:
       MINIO_ROOT_USER: ${MINIO_ROOT_USER:?set in .env}
