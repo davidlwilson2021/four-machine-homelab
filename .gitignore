@@ -1,0 +1,17 @@
+# Temp extraction / build artifacts
+_extract*/
+_lab_arch*
+_docx*
+*.zip
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Secrets (never commit)
+*.env
+.env.*
+secrets/
+
+# TrueNAS / local overrides
+configs/network/local-*.conf

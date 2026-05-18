@@ -1,0 +1,36 @@
+# Phase 4 — Mac Pro data platform (draft)
+# Deploy on [REDACTED_PRIVATE_IP] after Linux + Docker install.
+# Copy to host and run: docker compose up -d
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: lab
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
+      POSTGRES_DB: lab
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+
+  minio:
+    image: minio/minio:latest
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minio}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-changeme}
+    volumes:
+      - minio_data:/data
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    restart: unless-stopped
+
+  # Airflow and Jupyter Hub: add official compose overlays in Phase 4
+  # See: https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/
+
+volumes:
+  postgres_data:
+  minio_data:
