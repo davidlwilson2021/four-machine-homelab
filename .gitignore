@@ -17,3 +17,6 @@ secrets/
 
 # TrueNAS / local overrides
 configs/network/local-*.conf
+
+# Local agent memory (never public)
+AGENTS.md
