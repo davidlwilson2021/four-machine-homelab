@@ -41,7 +41,7 @@
 | 2 Antsle / TrueNAS | Pending ([checklist](docs/phase-2-antsle-checklist.md)) |
 | 3 Antsle services | Pending ([checklist](docs/phase-3-services-checklist.md)) |
 | 4 Mac Pro platform | Pending ([checklist](docs/phase-4-mac-pro-checklist.md)) |
-| 5 MSI AI workstation | Pending ([checklist](docs/phase-5-host-06-checklist.md)) |
+| 5 MSI AI workstation | Pending ([checklist](docs/phase-5-msi-checklist.md)) |
 | 6 MLOps loop | Pending ([checklist](docs/phase-6-mlops-checklist.md)) |
 | 7 Cyber (deferred) | — |
 
@@ -59,8 +59,8 @@ scripts/        Cold-backup rsync and migration verification helpers
 
 ## Sync (manual)
 
-- **Git remote:** Initialize and push when ready (`git remote add origin …`)
-- Keep hostnames, local paths, and addressing in private ops notes (not in public repo).
+- **Git remote:** `origin` is configured for this public showcase repository.
+- Keep hostnames, local paths, and literal addressing in the private ops repository (`four-machine-homelab-ops`).
 
 ---
 

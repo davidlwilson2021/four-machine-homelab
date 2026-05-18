@@ -18,5 +18,17 @@ secrets/
 # TrueNAS / local overrides
 configs/network/local-*.conf
 
+# Security remediation artifacts (ops repo only)
+.history_*
+.commit_meta_*
+.filter-repo-replacements.txt
+.mailmap-redact
+.literal_verify_post.txt
+.tracked_post.txt
+.replace-*.txt
+
+# Handoff / session ops
+files/
+
 # Local agent memory (never public)
 AGENTS.md
