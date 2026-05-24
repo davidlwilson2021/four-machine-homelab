@@ -22,7 +22,10 @@ du -sh "$WD_PATH" "$TANK_PATH"
 
 echo "=== Optional deep diff (set FOLDER=important-folder) ==="
 if [[ -n "${FOLDER:-}" ]]; then
-  diff -rq "$WD_PATH/$FOLDER" "$TANK_PATH/$FOLDER" || true
+  if ! diff -rq "$WD_PATH/$FOLDER" "$TANK_PATH/$FOLDER"; then
+    echo "ERROR: differences found in $FOLDER — migration may be incomplete"
+    exit 1
+  fi
 fi
 
 echo "OK: counts match"
